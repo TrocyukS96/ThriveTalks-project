@@ -1,0 +1,28 @@
+// out: ./main.min.css, compress: false, sourceMap: true
+
+
+img {
+   max-width: 100%;
+}
+
+//нужно отдельно прописывать для псевдоэлементов, так как в противном случае для них это не сработает
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+//стили для списков, типа normalize
+.list-reset {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+//стили для кнопок, типа normalize
+
+
+//////////////////////////////////////////////////
+
+
+
+@import './blocks/_header.less';
