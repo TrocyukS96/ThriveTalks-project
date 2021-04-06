@@ -1,7 +1,35 @@
 // main: ./../main.less
 
 .about {
+   grid-area: about;
+   grid-row: 3/4;
+   grid-column: 1/7;
+   padding: 165px 0 20px 0;
 
-   .about__subscr {}
+
+   &__subscr {
+      max-width: 540px;
+
+      margin: 0 auto;
+
+      font-size: 24px;
+      line-height: 34px;
+      letter-spacing: 0.005em;
+      position: relative;
+      color: #22356F;
+
+      &::before {
+         content: " About us";
+         font-size: 16px;
+         line-height: 23px;
+         letter-spacing: 0.06em;
+         text-align: left;
+         position: absolute;
+         top: 0;
+         left: -225px;
+
+      }
+
+   }
 
 }

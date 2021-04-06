@@ -1,0 +1,54 @@
+// main: ./../main.less
+
+.exercises {
+   grid-area: exercises;
+   grid-column: 1/7;
+   grid-row: 4/5;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: minmax(auto, 64px) minmax(auto, 360px);
+
+   &__text {
+      padding-bottom: 24px;
+
+      grid-row: 1/2;
+      justify-self: center;
+
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: #22356F;
+      opacity: 0.5;
+
+
+   }
+
+   &__items {
+      grid-row: 2/3;
+
+      display: grid;
+      grid-auto-flow: column;
+
+      & li:nth-child(1) {
+         background-color: #FFE2DE;
+      }
+
+      & li:nth-child(2) {
+         background-color: #C4E769;
+      }
+
+      & li:nth-child(3) {
+         background-color: #62D0DF;
+      }
+
+      & li:nth-child(4) {
+         background-color: #0052C1;
+      }
+   }
+
+   &__item {
+      border: 2px solid red;
+   }
+}

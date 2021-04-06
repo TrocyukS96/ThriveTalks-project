@@ -2,11 +2,13 @@
 
 
 .benefits {
+   grid-area: benefits;
    grid-row: 2/3;
    grid-column: 1/7;
+   overflow: hidden;
 
 
-   .benefits__columns {
+   &__columns {
       display: grid;
       grid-template-columns: 63.5% 36.5%;
 
@@ -14,15 +16,15 @@
       color: #fff;
    }
 
-   .benefits__text {
-      padding: 145px 0 90px 0px;
+   &__text {
+      padding: 145px 0 0px 0px;
 
       justify-self: center;
 
 
    }
 
-   .benefits__title {
+   &__title {
 
       font-size: 36px;
       line-height: 27px;
@@ -31,7 +33,7 @@
 
    }
 
-   .benefits__subscr {
+   &__subscr {
       max-width: 555px;
 
       padding-top: 70px;
@@ -42,7 +44,7 @@
       text-align: left;
    }
 
-   .benefits__subscr-span {
+   &__subscr-span {
 
       font-size: 24px;
       line-height: 35px;
@@ -51,7 +53,7 @@
       font-weight: 700;
    }
 
-   .benefits__img {
+   &__img {
 
 
       grid-column: 2/3;

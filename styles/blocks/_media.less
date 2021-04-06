@@ -5,6 +5,11 @@
 
 @media (max-width: 1100px) {
 
+   .header__top {
+
+      margin: 25px 0 50px 0;
+   }
+
    .header-conteiner::before,
    .header-conteiner::after {
       display: none;
@@ -36,16 +41,67 @@
       text-align: center;
       max-width: 100%;
    }
+
+   ///////////block benefits///////////////////////
+   .benefits__text {
+      padding: 110px 0 0px 0px;
+   }
+
+   ///////////block about///////////////////////
+   .about {
+      padding: 50px 0 0px 0;
+   }
+}
+
+@media (max-width: 1030px) {
+   .about__subscr {
+      text-align: center;
+   }
+
+   .about__subscr::before {
+      top: -16%;
+      left: 38%;
+
+      font-size: 35px;
+   }
+}
+
+@media (max-width: 1000px) {
+   .benefits__text {
+      padding: 50px 0 0 0;
+
+      display: flex;
+      flex-direction: column;
+
+   }
+
+   .benefits__title {
+      text-align: center;
+   }
+
+   .benefits__subscr {
+      padding: 20px 5px 0 5px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+   }
+}
+
+@media (max-width: 810px) {
+   .benefits__columns {
+      display: flex;
+      flex-direction: column-reverse;
+
+   }
+
+   .benefits__img {
+      object-fit: cover;
+   }
 }
 
 
 @media (max-width: 767.98px) {
    body .active {
       overflow: hidden;
-   }
-
-   .page {
-      grid-template-rows: minmax(auto, 842px) 1fr minmax(auto, 457px);
    }
 
    .header__novigation-item {
@@ -179,6 +235,7 @@
 
    .header__novigation.active {
       left: 0;
+      overflow: auto;
    }
 
    .header__novigation-item:hover::after {
@@ -223,12 +280,30 @@
    }
 }
 
-@media (max-width: 320px) {
-   .header__bottom-title {
-      padding-bottom: 30px;
-      padding-top: 20px;
-
-      font-size: 30px;
+@media (max-width: 470px) {
+   .about {
+      padding: 65px 0 0px 0;
    }
 
+   .about__subscr::before {
+      top: -36px;
+      left: 31%;
+      font-size: 35px;
+   }
+
+}
+
+@media (max-width: 350px) {
+   .about__subscr::before {
+      top: -36px;
+      left: 27%;
+
+   }
+}
+
+.header__bottom-title {
+   padding-bottom: 30px;
+   padding-top: 20px;
+
+   font-size: 30px;
 }

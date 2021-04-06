@@ -1,16 +1,19 @@
 // main: ./../main.less
 
 .page {
-   max-width: 1440px;
+   max-width: 1410px;
+   padding: 0 15px;
    margin: 0 auto;
    display: grid;
    grid-template-columns: minmax(auto, 360px) minmax(auto, 120px) minmax(auto, 240px) minmax(auto, 240px) minmax(auto, 120px) minmax(auto, 360px);
-   grid-template-rows: minmax(auto, 842px) minmax(auto, 418px) minmax(auto, 418px) minmax(auto, 463px);
+   // grid-template-rows: minmax(auto, 842px) minmax(auto, 578px) minmax(auto, 418px) minmax(auto, 463px);
+   grid-template-rows: repeat(5, auto);
 
    grid-template-areas:
       "header"
       "benefits"
       "about"
+      "exercises"
       "footer";
 
    justify-content: center;
