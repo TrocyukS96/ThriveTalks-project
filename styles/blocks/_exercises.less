@@ -1,12 +1,13 @@
 // main: ./../main.less
 
 .exercises {
+
    grid-area: exercises;
    grid-row: 4/5;
 
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: minmax(auto, 64px) minmax(auto, 360px);
+   grid-template-rows: minmax(64px, auto) minmax(360px, auto);
 
    &__text {
       padding-bottom: 24px;
@@ -30,6 +31,7 @@
 
       display: grid;
       grid-template-columns: minmax(350px, auto) minmax(350px, auto) minmax(350px, auto) minmax(350px, auto);
+
 
       & li:nth-child(1) {
          background-color: #FFE2DE;
@@ -61,20 +63,12 @@
 
 
 
-      &::after {
-         content: " ";
-         width: 255px;
-         height: 2px;
 
-         background-color: #fff;
-
-         position: absolute;
-         top: 70px;
-         left: 30px;
-      }
 
       & div {
          position: relative;
+
+         display: inline-block;
 
          &::before {
             content: " ";
@@ -88,8 +82,23 @@
             margin-right: 10px;
 
             position: absolute;
-            top: 11px;
-            left: -9%;
+            top: 14px;
+            left: -12%;
+
+         }
+
+         &::after {
+            content: " ";
+            width: 255px;
+            height: 2px;
+
+            background-color: #fff;
+
+            display: block;
+
+            position: absolute;
+            top: -40px;
+            left: -35px;
 
          }
       }

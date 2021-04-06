@@ -35,10 +35,11 @@ body.lock {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
-  grid-template-areas: "header" "benefits" "about" "exercises" "footer";
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "header" "benefits" "about" "exercises" "methods" "footer";
   justify-content: center;
   align-content: center;
+  border: 2px solid red;
 }
 .header {
   grid-area: header;
@@ -268,7 +269,7 @@ body.lock {
   grid-row: 4/5;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(auto, 64px) minmax(auto, 360px);
+  grid-template-rows: minmax(64px, auto) minmax(360px, auto);
 }
 .exercises__text {
   padding-bottom: 24px;
@@ -307,17 +308,9 @@ body.lock {
   letter-spacing: -0.006em;
   color: #fff;
 }
-.exercises__item::after {
-  content: " ";
-  width: 255px;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  top: 70px;
-  left: 30px;
-}
 .exercises__item div {
   position: relative;
+  display: inline-block;
 }
 .exercises__item div::before {
   content: " ";
@@ -327,8 +320,79 @@ body.lock {
   border-radius: 50%;
   margin-right: 10px;
   position: absolute;
-  top: 11px;
-  left: -9%;
+  top: 14px;
+  left: -12%;
+}
+.exercises__item div::after {
+  content: " ";
+  width: 255px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -35px;
+}
+.methods {
+  grid-area: methods;
+  margin-top: 120px;
+  grid-row: 5/6;
+}
+.methods__items {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+  grid-template-rows: repeat(2, minmax(480px, auto));
+  text-align: center;
+}
+.methods__items li:nth-child(1) {
+  background-color: #22356F;
+}
+.methods__items li:nth-child(2) {
+  background-color: #0052C1;
+}
+.methods__items li:nth-child(3) {
+  background: url(/assets/img/methods/nutrition.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.methods__items li:nth-child(4) {
+  background-color: #62D0DF;
+}
+.methods__items li:nth-child(5) {
+  background-color: #DEE1FF;
+}
+.methods__items li:nth-child(6) {
+  background-color: #8F00FF;
+}
+.methods__item {
+  padding: 95px 0 0 90px;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  color: #fff;
+}
+.methods__item-txt {
+  display: inline-block;
+  position: relative;
+}
+.methods__item-txt::before {
+  content: " ";
+  margin: 0 0 40px -35px;
+  width: 340px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+}
+.methods__item-txt::after {
+  content: " ";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #E9B730;
+  position: absolute;
+  top: 53px;
+  left: -20px;
 }
 .footer {
   grid-area: footer;
@@ -351,8 +415,21 @@ body.lock {
     left: 50%;
     transform: translateX(-50%);
   }
-  .exercises__item div::before {
-    display: none;
+  .methods__items {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, minmax(480px, auto));
+  }
+  .methods__item {
+    padding: 130px 0 0 0;
+    text-align: center;
+  }
+  .methods__item div::after {
+    top: 53px;
+    left: 4%;
+  }
+  .methods__item div::before {
+    width: 250px;
+    margin: 0 0 40px 0px;
   }
 }
 @media (max-width: 1100px) {
@@ -553,7 +630,7 @@ body.lock {
     padding-bottom: 25px;
   }
   .exercises__items {
-    grid-template-columns: minmax(500px, auto);
+    grid-template-columns: 100%;
     grid-template-rows: repeat(4, minmax(500px, auto));
   }
   .exercises__item {
@@ -561,10 +638,34 @@ body.lock {
     text-align: center;
     font-size: 45px;
   }
-  .exercises__item::after {
-    width: 200px;
-    top: 35%;
-    left: 50%;
+  .exercises__item div {
+    max-width: 155px;
+    line-height: 50px;
+  }
+  .exercises__item div::after {
+    width: 300px;
+  }
+  .methods {
+    margin-top: 70px;
+  }
+  .methods__items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(500px, auto));
+  }
+  .methods__item {
+    font-size: 45px;
+  }
+  .methods__item div::before {
+    margin: 0 0 40px -44px;
+    width: 260px;
+  }
+  .methods__item div::after {
+    top: 66%;
+    left: -20%;
+  }
+  .methods__item-txt {
+    max-width: 155px;
+    line-height: 50px;
   }
 }
 @media (max-width: 640px) {
@@ -599,6 +700,16 @@ body.lock {
     top: -36px;
     left: 31%;
     font-size: 35px;
+  }
+}
+@media (max-width: 420px) {
+  .exercises__item div {
+    max-width: 210px;
+    line-height: 50px;
+  }
+  .exercises__item div::after {
+    width: 200px;
+    left: -2%;
   }
 }
 @media (max-width: 350px) {
