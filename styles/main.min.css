@@ -35,8 +35,8 @@ body.lock {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, auto);
-  grid-template-areas: "header" "benefits" "about" "exercises" "methods" "facts" "footer";
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas: "header" "benefits" "about" "exercises" "methods" "facts" "information" "footer";
   justify-content: center;
   align-content: center;
   border: 2px solid red;
@@ -425,6 +425,53 @@ body.lock {
   letter-spacing: -0.03em;
   color: rgba(34, 53, 111, 0.5);
 }
+.information {
+  grid-area: information;
+  grid-row: 7/8;
+}
+.information__items {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  grid-template-rows: auto;
+}
+.information__txt {
+  padding: 340px 0px 0 90px;
+  background-color: #c0f3c4;
+}
+.information__subscr {
+  max-width: 680px;
+  position: relative;
+  font-size: 36px;
+  line-height: 53px;
+  letter-spacing: -0.01em;
+  color: #22356F;
+}
+.information__subscr::before {
+  content: "YOU SHOULD ALSO KNOW";
+  position: absolute;
+  bottom: 195%;
+  left: 0;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #22356F;
+}
+.information__link {
+  padding-top: 150px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #FAB63E;
+  transition: 0.6s ease;
+}
+.information__link:hover::after {
+  content: " ";
+  width: 140px;
+  height: 2px;
+  background-color: #62D0DF;
+  display: block;
+}
 .footer {
   grid-area: footer;
 }
@@ -462,6 +509,16 @@ body.lock {
     width: 250px;
     margin: 0 0 40px 0px;
   }
+  .information__txt {
+    padding: 214px 0px 0 60px;
+  }
+  .information__subscr::before {
+    bottom: 140%;
+    left: 0;
+  }
+  .information__link {
+    padding-top: 100px;
+  }
 }
 @media (max-width: 1100px) {
   .header__top {
@@ -498,6 +555,18 @@ body.lock {
   .about {
     padding: 50px 0 0px 0;
   }
+  .information__txt {
+    padding: 160px 5px 0 5px;
+    text-align: center;
+  }
+  .information__subscr::before {
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .information__link {
+    padding-top: 50px;
+  }
 }
 @media (max-width: 1030px) {
   .about__subscr {
@@ -530,6 +599,18 @@ body.lock {
   .facts__item {
     text-align: center;
   }
+  .information__txt {
+    padding: 100px 5px 0 5px;
+    text-align: center;
+  }
+  .information__subscr::before {
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .information__link {
+    padding-top: 30px;
+  }
 }
 @media (max-width: 810px) {
   .benefits__columns {
@@ -538,6 +619,14 @@ body.lock {
   }
   .benefits__img {
     object-fit: cover;
+  }
+  .information__items {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(400px, auto));
+  }
+  .information__img,
+  .information__txt {
+    justify-self: center;
   }
 }
 @media (max-width: 767.98px) {
@@ -742,6 +831,9 @@ body.lock {
     top: -36px;
     left: 31%;
     font-size: 35px;
+  }
+  .information__subscr::before {
+    bottom: 100%;
   }
 }
 @media (max-width: 420px) {

@@ -1,0 +1,73 @@
+// main: ./../main.less
+
+.information {
+   grid-area: information;
+
+   grid-row: 7/8;
+
+   &__items {
+      display: grid;
+      grid-template-columns: 34% 66%;
+      grid-template-rows: auto;
+   }
+
+   &__img {}
+
+   &__txt {
+      padding: 340px 0px 0 90px;
+      background-color: rgb(192, 243, 196);
+   }
+
+   &__subscr {
+      max-width: 680px;
+
+      position: relative;
+
+      font-size: 36px;
+      line-height: 53px;
+      letter-spacing: -0.01em;
+
+      color: #22356F;
+
+
+      &::before {
+         content: "YOU SHOULD ALSO KNOW";
+
+         position: absolute;
+         bottom: 195%;
+         left: 0;
+
+         font-size: 16px;
+         line-height: 30px;
+         letter-spacing: 0.06em;
+
+         color: #22356F;
+      }
+   }
+
+   &__link {
+      padding-top: 150px;
+
+      display: inline-block;
+
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0.1em;
+
+      color: #FAB63E;
+
+      transition: 0.6s ease;
+
+      &:hover::after {
+         content: " ";
+         width: 140px;
+         height: 2px;
+
+
+
+         background-color: @accentColor;
+
+         display: block;
+      }
+   }
+}
