@@ -1,6 +1,155 @@
 // main: ./../main.less
 .footer {
 
-
+   grid-row: 9/10;
    grid-area: footer;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto auto;
+
+   &__top {
+      grid-row: 1/2;
+
+      display: grid;
+      grid-template-columns: 39.5% 20.1% 18.2% 22.2%;
+      grid-template-rows: auto;
+
+   }
+
+
+   &__img {
+      grid-row: 1/2;
+      grid-column: 1/2;
+
+      object-fit: cover;
+   }
+
+   &__column {
+      padding: 90px 0 0 0;
+   }
+
+   &__column--first {
+      padding-left: 65px;
+
+      & p {
+         max-width: 170px;
+      }
+   }
+
+   &__column--second {
+      padding-left: 35px;
+
+      & p {
+         max-width: 135px;
+      }
+
+      & a {
+         display: block;
+         font-size: 14px;
+         line-height: 23px;
+         letter-spacing: -0.006em;
+         text-align: left;
+
+      }
+
+   }
+
+   &__column--third {
+      padding-left: 35px;
+   }
+
+   &__title {
+      padding: 0 0 50px 0;
+
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.006em;
+      text-align: left;
+      color: #22356F;
+
+   }
+
+   &__subscr {
+
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: -0.006em;
+      text-align: left;
+
+      color: #22356F;
+
+      opacity: 0.5;
+
+   }
+
+
+   &__link-tel {
+
+      padding-top: 35px;
+
+      color: #22356F;
+
+      opacity: 0.5;
+
+      &:hover::after {
+         content: " ";
+
+         margin-top: -4px;
+
+         width: 105px;
+         height: 1px;
+         background-color: currentColor;
+         display: block;
+      }
+   }
+
+   &__link-mail {
+      padding-top: 20px;
+
+      color: #0052C1;
+
+      &:hover::after {
+         content: " ";
+
+         margin-top: -4px;
+
+         width: 150px;
+         height: 1px;
+         background-color: currentColor;
+         display: block;
+      }
+   }
+
+   &__list {}
+
+   &__list-item {
+      padding-bottom: 12px;
+
+      color: #22356F;
+
+      opacity: 0.5;
+   }
+
+   &__bottom {
+      grid-row: 2/3;
+
+      display: grid;
+      grid-template-columns: 39.5% 60.5%;
+      grid-template-rows: auto;
+
+      background-color: @accentColor;
+   }
+
+   &__bottom-txt {
+      padding: 30px 0;
+
+      font-size: 14px;
+      line-height: 11px;
+      letter-spacing: -0.006em;
+      text-align: center;
+      color: #fff;
+
+   }
+
 }
