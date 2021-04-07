@@ -60,6 +60,16 @@
    .information__link {
       padding-top: 100px;
    }
+
+   ////////////block contacts//////////////////////
+   .contacts__txt {
+      padding: 180px 0 0px 150px;
+   }
+
+   .contacts__title::before {
+      top: -130px;
+
+   }
 }
 
 
@@ -117,8 +127,9 @@
       padding: 160px 5px 0 5px;
 
       text-align: center;
-
    }
+
+
 
    .information__subscr::before {
 
@@ -129,6 +140,29 @@
 
    .information__link {
       padding-top: 50px;
+   }
+
+
+   /////////////block contacts////////////////////////////
+   .contacts__txt {
+      padding: 160px 5px 0 5px;
+
+      text-align: center;
+   }
+
+   .contacts__title {
+      text-align: center;
+
+      &::before {
+         top: -50px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+
+   .contacts__subscr {
+      margin: 0 auto;
+      text-align: center;
    }
 }
 
@@ -193,6 +227,19 @@
    .information__link {
       padding-top: 30px;
    }
+
+   ///////////block contacts///////////////
+   .contacts__txt {
+      padding: 100px 5px 0 5px;
+   }
+
+   .contacts__title {
+      padding: 0 0 15px 0;
+   }
+
+   .contacts__subscr {
+      padding: 0 0 50px 0;
+   }
 }
 
 @media (max-width: 810px) {
@@ -218,7 +265,29 @@
       justify-self: center;
    }
 
+   .information__link {
+      padding: 0 0 20px 0;
+   }
 
+   .information__subscr::before {
+      bottom: 104%;
+   }
+
+   ///////////contacts block///////////////
+   .contacts__items {
+      grid-template-columns: 100%;
+
+      grid-template-rows: repeat(2, auto);
+
+      .contacts__link {
+         padding: 0 0 20px 0;
+      }
+
+      .contacts__img {
+         grid-column: 1/2;
+         justify-self: center;
+      }
+   }
 }
 
 
@@ -460,6 +529,13 @@
       grid-template-rows: repeat(6, minmax(160px, auto));
 
    }
+
+   ////////////block contacts//////////////////
+   .contacts__title {
+      font-size: 50px;
+   }
+
+
 }
 
 @media (max-width: 520px) {
@@ -473,6 +549,13 @@
    .exercises__items {
       grid-template-columns: minmax(300px, auto);
       grid-template-rows: repeat(4, minmax(300px, auto));
+   }
+
+   /////////////////conttacts block/////////////////////
+   .contacts__title {
+      font-size: 40px;
+      line-height: 30px;
+      padding-bottom: 30px;
    }
 }
 
