@@ -129,6 +129,17 @@
       margin: 0 auto 20px auto;
       text-align: center;
    }
+
+   ////////////block facts//////////////////
+   .facts__items {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(3, minmax(240px, auto));
+
+   }
+
+   .facts__item {
+      text-align: center;
+   }
 }
 
 @media (max-width: 810px) {
@@ -141,6 +152,8 @@
    .benefits__img {
       object-fit: cover;
    }
+
+
 }
 
 
@@ -376,7 +389,12 @@
       }
    }
 
-   //////////methods block/////////////////////
+   ////////////block facts//////////////////
+   .facts__items {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, minmax(160px, auto));
+
+   }
 }
 
 @media (max-width: 520px) {

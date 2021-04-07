@@ -35,8 +35,8 @@ body.lock {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, auto);
-  grid-template-areas: "header" "benefits" "about" "exercises" "methods" "footer";
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "header" "benefits" "about" "exercises" "methods" "facts" "footer";
   justify-content: center;
   align-content: center;
   border: 2px solid red;
@@ -334,8 +334,8 @@ body.lock {
   left: -35px;
 }
 .methods {
-  grid-area: methods;
   margin-top: 120px;
+  grid-area: methods;
   grid-row: 5/6;
 }
 .methods__items {
@@ -393,6 +393,37 @@ body.lock {
   position: absolute;
   top: 53px;
   left: -20px;
+}
+.facts {
+  margin-top: 20px;
+  grid-area: facts;
+  grid-row: 6/7;
+}
+.facts__items {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+  grid-template-rows: repeat(2, minmax(240px, auto));
+}
+.facts__item {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.facts__item-txt {
+  max-width: 298px;
+}
+.facts__item-title {
+  padding: 0 0 20px 0;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  color: #22356F;
+}
+.facts__item-subscr {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.03em;
+  color: rgba(34, 53, 111, 0.5);
 }
 .footer {
   grid-area: footer;
@@ -490,6 +521,13 @@ body.lock {
   .benefits__subscr {
     padding: 20px 5px 0 5px;
     margin: 0 auto 20px auto;
+    text-align: center;
+  }
+  .facts__items {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, minmax(240px, auto));
+  }
+  .facts__item {
     text-align: center;
   }
 }
@@ -671,6 +709,10 @@ body.lock {
 @media (max-width: 640px) {
   .exercises__item::after {
     display: none;
+  }
+  .facts__items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(160px, auto));
   }
 }
 @media (max-width: 520px) {

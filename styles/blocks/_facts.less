@@ -1,0 +1,47 @@
+// main: ./../main.less
+
+.facts {
+   margin-top: 20px;
+
+   grid-area: facts;
+
+   grid-row: 6/7;
+
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 33.333%);
+      grid-template-rows: repeat(2, minmax(240px, auto));
+
+   }
+
+   &__item {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+
+   }
+
+   &__item-txt {
+      max-width: 298px;
+   }
+
+   &__item-title {
+      padding: 0 0 20px 0;
+
+      font-size: 28px;
+      line-height: 33px;
+      letter-spacing: -0.03em;
+
+      color: #22356F;
+   }
+
+   &__item-subscr {
+
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: -0.03em;
+
+      color: rgba(34, 53, 111, 0.5);
+   }
+
+}
