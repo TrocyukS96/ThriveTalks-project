@@ -656,6 +656,9 @@ body.lock {
     left: 50%;
     transform: translateX(-50%);
   }
+  .methods {
+    margin-top: 45px;
+  }
   .methods__items {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, minmax(480px, auto));
@@ -1027,7 +1030,7 @@ body.lock {
     width: 300px;
   }
   .methods {
-    margin-top: 70px;
+    margin-top: 10px;
   }
   .methods__items {
     grid-template-columns: 1fr;
@@ -1089,6 +1092,10 @@ body.lock {
     grid-row: 3/4;
     grid-column: 1/3;
     justify-self: center;
+  }
+  .footer__link-tel,
+  .footer__link-mail {
+    padding-top: 0;
   }
 }
 @media (max-width: 420px) {
