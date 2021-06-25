@@ -68,7 +68,7 @@ body.lock {
   content: " ";
   height: 875px;
   width: 971px;
-  background: url("/assets/img/header/mask-group.svg") no-repeat;
+  background: url("../assets/img/header/mask-group.svg") no-repeat;
   position: absolute;
   top: -60px;
   right: -344px;
@@ -79,7 +79,7 @@ body.lock {
   height: 544px;
   width: 807px;
   border-radius: 312px;
-  background: url(/assets/img/header/rectangle\ 3.1.svg) no-repeat;
+  background: url(../assets/img/header/rectangle\ 3.1.svg) no-repeat;
   position: absolute;
   top: -60px;
   right: -220px;
@@ -349,7 +349,7 @@ body.lock {
   background-color: #0052C1;
 }
 .methods__items li:nth-child(3) {
-  background: url(/assets/img/methods/nutrition.png) no-repeat;
+  background: url(../assets/img/methods/nutrition.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
