@@ -60,6 +60,12 @@
       letter-spacing: -0.006em;
       color: #fff;
 
+      transition: all .3s ease-in-out;
+
+      transform: scale(0);
+
+
+
 
 
 
@@ -101,5 +107,9 @@
 
          }
       }
+   }
+
+   &__item._active {
+      transform: scale(1);
    }
 }

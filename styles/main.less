@@ -1,5 +1,8 @@
 // out: ./main.min.css, compress: false, sourceMap: true
 
+html {
+   scroll-behavior: smooth;
+}
 
 body {
    min-height: 100vh;
@@ -36,13 +39,24 @@ body.lock {
    overflow: hidden;
 }
 
-.title {}
-
-.subscr {}
-
 .logo {
    color: @accentColor;
 }
+
+.anim-show {
+   transform: translate(0%, 120%);
+   opacity: 0;
+
+   transition: all .3s ease;
+
+}
+
+.anim-show._active,
+._active .anim-show {
+   transform: translate(0px, 0px);
+   opacity: 1;
+}
+
 
 //////////////////////////////////////////////////
 

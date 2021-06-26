@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
 }
@@ -25,6 +28,16 @@ body.lock {
 }
 .logo {
   color: #62D0DF;
+}
+.anim-show {
+  transform: translate(0%, 120%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.anim-show._active,
+._active .anim-show {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .burger {
   display: none;
@@ -242,7 +255,8 @@ body.lock {
 .about {
   grid-area: about;
   grid-row: 3/4;
-  padding: 165px 0 20px 0;
+  padding: 70px 0 20px;
+  background-color: #6e74e8;
 }
 .about__subscr {
   max-width: 540px;
@@ -251,7 +265,7 @@ body.lock {
   line-height: 34px;
   letter-spacing: 0.005em;
   position: relative;
-  color: #22356F;
+  color: #fff;
 }
 .about__subscr::before {
   content: " About us";
@@ -305,6 +319,8 @@ body.lock {
   line-height: 34px;
   letter-spacing: -0.006em;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
 }
 .exercises__item div {
   position: relative;
@@ -330,6 +346,9 @@ body.lock {
   position: absolute;
   top: -40px;
   left: -35px;
+}
+.exercises__item._active {
+  transform: scale(1);
 }
 .methods {
   margin-top: 120px;
@@ -369,6 +388,11 @@ body.lock {
   letter-spacing: -0.006em;
   text-align: left;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.methods__item._active {
+  transform: scale(1);
 }
 .methods__item-txt {
   display: inline-block;
@@ -406,6 +430,11 @@ body.lock {
   display: grid;
   justify-content: center;
   align-content: center;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.facts__item._active {
+  transform: scale(1);
 }
 .facts__item-txt {
   max-width: 298px;
@@ -482,7 +511,6 @@ body.lock {
 .contacts__img {
   grid-column: 2/3;
   object-fit: cover;
-  min-height: 100%;
 }
 .contacts__txt {
   padding: 350px 0 42px 160px;
@@ -637,6 +665,11 @@ body.lock {
   letter-spacing: -0.006em;
   text-align: center;
   color: #fff;
+}
+.footer__link {
+  position: fixed;
+  bottom: 1%;
+  right: 4%;
 }
 @media (max-width: 1370px) {
   .exercises__text {
